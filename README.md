@@ -100,7 +100,7 @@ Politikken bestiller mer ved lav verdi for lagerstatus og mindre ved høy lagert
 ### Tolkning av resultater
 **Q-learning viser bedre resultat** ved de satte parametere enn både tilfeldige- og fastsatte- bestillinger. Dette tyder på at agenten har lært en noe nyttig politikk.
 
-**Politikken ("learned policy") bestiller mer når lageret er tomt**, og mindre jo mer som er på lager. Unntaket er når lagerstatus er betydelig høyere over "DEMAND_MEAN". Lageret når sjeldent veldig høy status, og agenten får ikke nok erfaring rundt disse nivåene til å sette en bedre policy for disse nivåene. Samtidig er det mindre behov for god policy rundt verdier som sjeldent oppnås.
+**Politikken ("learned policy") bestiller mer når lageret er tomt**, og mindre jo mer som er på lager. Unntaket er når lagerstatus er betydelig høyere over "DEMAND_MEAN". Lageret når sjeldent veldig høy status, og agenten får ikke nok erfaring rundt disse nivåene til å sette en bedre policy for disse nivåene. Samtidig er det mindre behov for god policy rundt verdier som sjeldent oppnås. I miljøet settes det opp begrensing som hindrer bestillinger utover lagerkapasitet. Det vil si at ved den bestillingen fra "Lært politikk"-tabellen der det er er 27 varer på lager og agenten vil bestille 11 til, mens lagerkapasiteten bare er 30, så ankommer det bare 3 varer til hylla.
 
 **Læringskurven (fra plottene) er støyete**. Med tilfeldig etterspørsel er dette å forvente, da flere like handlinger ved samme tilstand vil gi forskjellig belønning ut i fra etterspørselen den dagen. Det ble lagt til en "smooth"-graf, som er gjennomsnittlig læring, for bedre representasjon av læringskurven.
 
