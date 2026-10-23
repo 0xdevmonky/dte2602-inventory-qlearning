@@ -122,21 +122,25 @@ Disse, med flere, "snarveier" med programmet gjør oppgaven mindre realistisk.
 
 
 ## Hvordan kjøre programmet
-**Fra prosjektmappen**:
+### Filstruktur
+- `environment.py` - lager "verden"/miljøet
+- `q_learning.py` - agenten
+- `main.py` - Program og plot
+- `parameters.py` - alle Brukerinnstillinger
 
-**Lag virituelt miljø**:
+### Lag virituelt miljø:
+**OBS!** - Alle kommandoer må kjøres fra prosjektmappen.
 ```bash
 python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 ```
-**Kjør program**:
+### Kjør program:
 ```bash
 python main.py
 ```
 Nye plots lagres i prosjektmappen etter kjøring.
 
-**Brukerinnstillinger** finnes i parameters.py:
 Om resultater "uten e-decay" ønskes å igenskapes må epsilon deaktiveres i parameters.py:
 ```bash
 EPSILON_DECAY_ENABLE = False
