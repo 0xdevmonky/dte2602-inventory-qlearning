@@ -134,6 +134,7 @@ Kjør program:
 python main.py
 ```
 Nye plots lagres i prosjektmappen etter kjøring.
+
 **Brukerinnstillinger** finnes i parameters.py
 
 Om resultater "uten e-decay" ønskes å igenskapes må epsilon deaktiveres i parameters.py:
