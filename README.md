@@ -53,6 +53,9 @@ Agenten utforsker under trening, men når endelig ytelse evalueres settes epsilo
 | Q-learning   | 17314        | 191.3 |
 | Fixed        | 15331        | 117.6 |
 | Random       | 12917        | 94.5  |
+|--------------|--------------|-------|
+
+
 ![Læringskurven med aktiv e-decay](learning_curve_w_decay.png) | ![Sammenligning av q_learning og baseline, med q-decay](comparison_w_decay.png)
 (om leser bruker en .md-leser som ikke visualiserer plots, så finnes disse plottene i prosjektmappen (w_decay)
 
