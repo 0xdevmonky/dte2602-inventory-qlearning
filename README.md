@@ -98,15 +98,15 @@ Politikken bestiller mer ved lav verdi for lagerstatus og mindre ved høy lagert
 
 
 ### Tolkning av resultater
-Q-learning viser bedre resultat ved de satte parametere enn både tilfeldige- og fastsatte- bestillinger. Dette tyder på at agenten har lært en noe nyttig politikk.
+**Q-learning viser bedre resultat** ved de satte parametere enn både tilfeldige- og fastsatte- bestillinger. Dette tyder på at agenten har lært en noe nyttig politikk.
 
-Politikken ("learned policy") bestiller mer når lageret er tomt, og mindre jo mer som er på lager. Unntaket er når lagerstatus er betydelig høyere over "DEMAND_MEAN". Lageret når sjeldent veldig høy status, og agenten får ikke nok erfaring rundt disse nivåene til å sette en bedre policy for disse nivåene. Samtidig er det mindre behov for god policy rundt verdier som sjeldent oppnås.
+**Politikken ("learned policy") bestiller mer når lageret er tomt**, og mindre jo mer som er på lager. Unntaket er når lagerstatus er betydelig høyere over "DEMAND_MEAN". Lageret når sjeldent veldig høy status, og agenten får ikke nok erfaring rundt disse nivåene til å sette en bedre policy for disse nivåene. Samtidig er det mindre behov for god policy rundt verdier som sjeldent oppnås.
 
-Læringskurven (fra plottene) er støyete. Med tilfeldig etterspørsel er dette å forvente, da flere like handlinger ved samme tilstand vil gi forskjellig belønning ut i fra etterspørselen den dagen. Det ble lagt til en "smooth"-graf, som er gjennomsnittlig læring, for bedre representasjon av læringskurven.
+**Læringskurven (fra plottene) er støyete**. Med tilfeldig etterspørsel er dette å forvente, da flere like handlinger ved samme tilstand vil gi forskjellig belønning ut i fra etterspørselen den dagen. Det ble lagt til en "smooth"-graf, som er gjennomsnittlig læring, for bedre representasjon av læringskurven.
 
-I plottet av læringskurve uten e-decay kommer det frem en lavere kurve enn med decay. Allikevel ser vi at den enderlige politikken uten decay faktisk presterer like bra eller litt bedre enn med decay. Ved høy epsilon utforskes det mye gjennom hele treningen og agenten presterer litt lavere da den utforsker hele tiden. Når evaluering kjøres settes epsilon til 0 og agenten bruker bare beste kjente handling og presterer da på sitt beste ved hver gjennomføring, da den ikke utforsker lengre.
+I plottet av **læringskurve uten e-decay**, kommer det frem en lavere kurve enn med decay. Allikevel ser vi at den enderlige politikken uten decay faktisk presterer like bra eller litt bedre enn med decay. Ved høy epsilon utforskes det mye gjennom hele treningen og agenten presterer litt lavere da den utforsker hele tiden. Når evaluering kjøres settes epsilon til 0 og agenten bruker bare beste kjente handling og presterer da på sitt beste ved hver gjennomføring, da den ikke utforsker lengre.
 
-e-decay ga ingen tydelig forbedring i politikk for oppgaven gitt de satte parametere. Det tenkes at oppgaven "lagerstatus", slik den er satt opp i dette programmet, blir litt for enkel, og at innsnevring av sannsynlighet for utforskning derfor har mindre effekt enn ved ett vanskeligere problem.
+**e-decay ga ingen tydelig forbedring** i politikk for oppgaven gitt de satte parametere. Det tenkes at oppgaven "lagerstatus", slik den er satt opp i dette programmet, blir litt for enkel, og at innsnevring av sannsynlighet for utforskning derfor har mindre effekt enn ved ett vanskeligere problem.
 
 ### Konklusjon
 Resultatene som helhet tyder på at Q-læring fungerer greit for denne typen oppgave, da politikken presterer bedre enn både random- og fixed-baseline. e-decay antas å være mer passende for mer komplekse oppgaver, men videre eksperimentering behøves før dette kan påstås med bedre sikkerhet.
