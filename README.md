@@ -13,7 +13,7 @@ I dette prosjektet anvendes Q-læring for lagerstyring. Mer spesifikt så tenkes
 - **Etterspørsel**: Poisson fordeling med gjennomsnitt på 10.
 - **Lengde per episode**: 100 dager
 
-Ett "step" skjer i følgende sekvens:
+Ett steg skjer i følgende sekvens:
 1. Bestilling mottas og legges umiddelbart til lagerstatus.
 2. Tilfeldig etterspørsel (Poisson) hentes.
 3. Salgsdag gjennomføres
@@ -117,7 +117,7 @@ Dette prosjektet, som det står nå, ansees å være et greit utgangspunkt for l
 - Bestillingene kommer momentant. Det er ingen leveringstid.
 - Etterspørsel er tilfeldig rundt et gjennomsnitt. Etterspørselen av melk er det samme gjennom uka osv.
 - Veldig snevert område for tilstand og handling.
-- Kanskje bedre å sette "fixed-baseline" til litt under "DEMAND_MEAN".
+
 Disse, med flere, "snarveier" med programmet gjør oppgaven mindre realistisk.
 
 
