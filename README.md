@@ -24,14 +24,11 @@ Ett "step" skjer i følgende sekvens:
 ```bash
 reward = sold * ITEM_SALE_PRICE - holding - stockout - order_cost
 ```
-Belønning = varesalg * varepris - vare_lagringspris - tom_hylle_pris - bestillingskostnad
-**Med satte verdier**:
-Belønning = 22*salg - 4*beholdning - 12*tapt_salg - 2*bestilt
 
 **Parameter-valg**:
-- ALPHA = 0.05: Veldig lav lærings-rate grunnet tilfeldig etterspørsel (Poisson).
-- GAMMA = 0.3: Lav fremsikt da produktvalg ble tenkt å være melk, en ferskvare, der fremsikt har mindre betydning.
-- EPSILON = 0.6: Tanken er at ved aktiv epsilon-decay skal agenten utforske ganske mye i starten, og senere snevre inn utforskningen.
+- **ALPHA** = 0.05: Veldig lav lærings-rate grunnet tilfeldig etterspørsel (Poisson).
+- **GAMMA** = 0.3: Lav fremsikt da produktvalg ble tenkt å være melk, en ferskvare, der fremsikt har mindre betydning.
+- **EPSILON** = 0.6: Tanken er at ved aktiv epsilon-decay skal agenten utforske ganske mye i starten, og senere snevre inn utforskningen.
 
 ## Resultater
 I resultat under var det implementert to "forbedringer", epsilon-decay som var en valgfri forbedring, og separat greedy evaluering som var et krav satt av oppgaveteksten:
@@ -42,9 +39,10 @@ Det viser seg i resultatene under at denne "forbedringen" ikke hadde betydelig p
 Agenten utforsker under trening, men når endelig ytelse evalueres settes epsilon til 0. Dette for å tydeliggjøre resultat av treningen. Agenten behøver ikke utforske under evaluering, da det er best å holde seg til det det har lært for å tydeliggjøre om det den har lært til nå faktisk fungerer. Denne "forbedringen" ble implementert da oppgaveteksten ba om det. Det tenkes samtidig at dette er en faktisk forbedring da det absolutt gir mening å bruke ferdiglært politikk under evaluering av læringen, og ikke bare utforske videre, som kunne vært tilfelle uten denne forbedringen.
 
 ### Parametre for resultatene under:
-- ALPHA = 0.05, GAMMA = 0.3, EPSILON_START = 0.6
-- EPISODES = 1000, EVAL_EPISODES = 100, NR_OF_SEEDS = 25
-- MAX_INVENTORY = 30, MAX_ORDER = 20, DEMAND_MEAN = 10
+- **ALPHA** = 0.05, **GAMMA** = 0.3, **EPSILON_START** = 0.6
+- **EPISODES** = 1000, **EVAL_EPISODES** = 100, **NR_OF_SEEDS** = 25
+- **MAX_INVENTORY** = 30, **MAX_ORDER** = 20, **DEMAND_MEAN** = 10
+
 (Her er noen av de viktigste parametrene brukt for kjøring av programmet som ga resultatene under. Se parameters.py for alle parametere)
 
 ### Med ε-decay
@@ -99,7 +97,7 @@ Politikken bestiller mer ved lav verdi for lagerstatus og mindre ved høy lagert
 **Tabellene over** viser de viktigste parametre fra parameters.py, utfallet av læringen samt evaluerings utfallene fra random- og fixed-baseline, som er tilfeldige bestillinger og faste bestillinger av gjennomsnittlig etterspørsel. Plottene fra kjøring av main.py lagres direkte i prosjektmappen og viser stolpediagram av de forskjellige utfallene og læringskurven for q-læringen. Plottene fra de spesifikke gjennomføringene fremvist her finnes i undermappen "Plots". Videre fremvises også "learned policy", som er hva en ferdigtrent agent vil bestille i forhold til lagerstatus.
 
 
-**Tolkning av resultater**
+### Tolkning av resultater
 Q-learning viser bedre resultat ved de satte parametere enn både tilfeldige- og fastsatte- bestillinger. Dette tyder på at agenten har lært en noe nyttig politikk.
 
 Politikken ("learned policy") bestiller mer når lageret er tomt, og mindre jo mer som er på lager. Unntaket er når lagerstatus er betydelig høyere over "DEMAND_MEAN". Lageret når sjeldent veldig høy status, og agenten får ikke nok erfaring rundt disse nivåene til å sette en bedre policy for disse nivåene. Samtidig er det mindre behov for god policy rundt verdier som sjeldent oppnås.
@@ -110,7 +108,7 @@ I plottet av læringskurve uten e-decay kommer det frem en lavere kurve enn med 
 
 e-decay ga ingen tydelig forbedring i politikk for oppgaven gitt de satte parametere. Det tenkes at oppgaven "lagerstatus", slik den er satt opp i dette programmet, blir litt for enkel, og at innsnevring av sannsynlighet for utforskning derfor har mindre effekt enn ved ett vanskeligere problem.
 
-**Konklusjon**
+### Konklusjon
 Resultatene som helhet tyder på at Q-læring fungerer greit for denne typen oppgave, da politikken presterer bedre enn både random- og fixed-baseline. e-decay antas å være mer passende for mer komplekse oppgaver, men videre eksperimentering behøves før dette kan påstås med bedre sikkerhet.
 
 
