@@ -21,9 +21,9 @@ Ett "step" skjer i følgende sekvens:
 5. Lagerstatus etter endt salgsdag returneres.
 
 **Belønnings-formel**:
-'''bash
+```bash
 reward = sold * ITEM_SALE_PRICE - holding - stockout - order_cost
-'''
+```
 Belønning = varesalg * varepris - vare_lagringspris - tom_hylle_pris - bestillingskostnad
 **Med satte verdier**:
 Belønning = 22*salg - 4*beholdning - 12*tapt_salg - 2*bestilt
@@ -53,8 +53,7 @@ Agenten utforsker under trening, men når endelig ytelse evalueres settes epsilo
 | Q-learning   | 17314        | 191.3 |
 | Fixed        | 15331        | 117.6 |
 | Random       | 12917        | 94.5  |
-![Læringskurven med aktiv e-decay](learning_curve_w_decay.png)
-![Sammenligning av q_learning og baseline, med q-decay](comparison_w_decay.png)
+![Læringskurven med aktiv e-decay](learning_curve_w_decay.png) | ![Sammenligning av q_learning og baseline, med q-decay](comparison_w_decay.png)
 (om leser bruker en .md-leser som ikke visualiserer plots, så finnes disse plottene i prosjektmappen (w_decay)
 
 Q-learning presterer bedre enn random- og fixed-baseline.
@@ -65,8 +64,7 @@ Q-learning presterer bedre enn random- og fixed-baseline.
 | Q-learning   | 17402        | 143.1 |
 | Fixed        | 15331        | 117.6 |
 | Random       | 12917        | 94.5  |
-![Læringskurven uten e-decay](learning_curve_wo_decay.png)
-![Sammenligning av q_learning og baseline, uten q-decay](comparison_wo_decay.png)
+![Læringskurven uten e-decay](learning_curve_wo_decay.png) | ![Sammenligning av q_learning og baseline, uten q-decay](comparison_wo_decay.png)
 (om leser bruker en .md-leser som ikke visualiserer plots, så finnes disse plottene i prosjektmappen (wo_decay)
 
 Sammenligner vi de to tabellene, med og uten epsilon decay, ser vi at denne implementasjonen (e-decay) ikke gir tydelig bedre resultater ved parametrene som ble testet for.
@@ -123,20 +121,15 @@ Disse, med flere, "snarveier" med programmet gjør oppgaven mindre realistisk.
 
 ## Hvordan kjøre programmet
 Fra prosjektmappen, kjør:
-
-'''bash
+```bash
 python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 python main.py
-'''
-
+```
 Nye plots lagres i prosjektmappen etter kjøring.
 
-
 Om resultater "uten e-decay" ønskes å igejenskapes må epsilon deaktiveres i parameters.py:
-
-'''bash
-EPSILON_DECAY_ENABLE = False 
-'''
-
+```bash
+EPSILON_DECAY_ENABLE = False
+```
