@@ -147,3 +147,7 @@ EPSILON_DECAY_ENABLE = False
 
 ## Video
 [Videogjennomgang av koden](https://universitetetitromso-my.sharepoint.com/:v:/g/personal/trlan7127_uit_no/IQAmMszdl7ojRL6r-riD5C0DAf81tpDNyPfwNZCc99iULZM?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=7xWmY2)
+
+## KI-erklæring
+KI ble brukt under arbeidet med denne oppgaven.  
+Jeg tar fullt ansvar for innholdet.
