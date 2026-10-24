@@ -1,7 +1,6 @@
 # "Graded project 1": Q-læring for Lagerstyring
 Dette prosjektet svarer til en mappeinnlevering, "Graded project 1", i fag-emnet DTE-2602 ved UiT.
 
-
 ## Scenario og motivasjon
 I dette prosjektet anvendes Q-læring for lagerstyring. Mer spesifikt så tenkes det at vi har en liten butikk som skal anvende Q-læring for bestilling av melk. Det bestilles melk daglig, men butikken vet aldri hvor mange kunder som ønsker melken. Å bestille for mye melk bringer med seg en kostnad, da det tenkes at kjøling av melken samt kort holdbarhet koster resurser og bør unngås. For lite produkt fører til tapt salg den dagen og bør også unngås. Oppgaven vurderes å være passende for forsterkningslæring da den innebærer sekvensielle avgjørelser og utfall, samt en tilfeldighetsfaktor i form av usikkerheten rundt hvor mye melk som vil selges.
 
@@ -145,3 +144,6 @@ Om resultater "uten e-decay" ønskes å igenskapes må epsilon deaktiveres i par
 ```bash
 EPSILON_DECAY_ENABLE = False
 ```
+
+## Video
+[Videogjennomgang av koden](https://universitetetitromso-my.sharepoint.com/:v:/g/personal/trlan7127_uit_no/IQAmMszdl7ojRL6r-riD5C0DAf81tpDNyPfwNZCc99iULZM?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=7xWmY2)
