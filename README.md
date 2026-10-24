@@ -149,5 +149,5 @@ EPSILON_DECAY_ENABLE = False
 [Videogjennomgang av koden](https://universitetetitromso-my.sharepoint.com/:v:/g/personal/trlan7127_uit_no/IQAmMszdl7ojRL6r-riD5C0DAf81tpDNyPfwNZCc99iULZM?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=7xWmY2)
 
 ## KI-erklæring
-KI ble brukt under arbeidet med denne oppgaven.  
+KI ble brukt under arbeidet med denne oppgaven, både til å forklare og foreslå kode, og for å helpe med struktur og sytax for README-/Rapport-fila.
 Jeg tar fullt ansvar for innholdet.
