@@ -125,8 +125,8 @@ Disse, med flere, "snarveier" med programmet gjør oppgaven mindre realistisk.
 ### Filstruktur
 - `environment.py` - lager "verden"/miljøet
 - `q_learning.py` - agenten
-- `main.py` - Program og plot
-- `parameters.py` - alle Brukerinnstillinger
+- `main.py` - program og plot
+- `parameters.py` - alle brukerinnstillinger
 
 ### Lag virituelt miljø:
 **OBS!** - Alle kommandoer må kjøres fra prosjektmappen.
