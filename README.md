@@ -149,7 +149,8 @@ EPSILON_DECAY_ENABLE = False
 [Videogjennomgang av koden](https://universitetetitromso-my.sharepoint.com/:v:/g/personal/trlan7127_uit_no/IQAmMszdl7ojRL6r-riD5C0DAf81tpDNyPfwNZCc99iULZM?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=7xWmY2)
 
 ## Credits
-Utgangspunktet for alle .py filene i dette prosjekt kommer fra "assignment four" i DTE-2602 repoet.
+Utgangspunktet for alle .py filene i dette prosjekt kommer fra "assignment four" i DTE-2602 repoet:
+
 [Link til DTE-2602 repo](https://github.com/reo303halo/DTE-2602_26H/tree/main/RL/assignment_four)
 
 ## KI-erklæring
